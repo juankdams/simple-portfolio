@@ -8,34 +8,39 @@ interface Education {
     currentUni: boolean;
 }
 
-const  education: Education[] = [
+const education: Education[] = [
     {
-        title: "General English",
-        startDate: "2024-09-01",
-        endDate: "",
-        school: "University Name",
-        location: "United States",
-        description: "Developed and maintained web applications using React, NodeJs, and MongoDB.",
-        currentUni: true,
-    },
-    {
-        title: "Bachelor of Science in Computer Science",
-        startDate: "2014-09-01",
-        endDate: "2018-06-30",
-        school: "University Name",
-        location: "United States",
-        description: "Developed and maintained web applications using React, NodeJs, and MongoDB.",
+        title: "Ingeniería Industrial",
+        startDate: "2015-06-01",
+        endDate: "2024-12-20",
+        school: "Universidad del Atlántico",
+        location: "Barranquilla, Colombia",
+        description: "Grado universitario en Ingeniería Industrial.",
         currentUni: false,
     },
     {
-        title: "Bachelor of Science in Computer Science",
-        startDate: "2012-09-01",
-        endDate: "2013-06-30",
-        school: "University Name",
-        location: "United States",
-        description: "Developed and maintained web applications using React, NodeJs, and MongoDB.",
+        title: "Auditor interno en sistemas integrados de gestión",
+        startDate: "2023-01-01",
+        endDate: "2023-12-01",
+        school: "Bureau Veritas",
+        location: "Barranquilla, Colombia",
+        description: "Certificación como auditor interno en sistemas integrados de gestión.",
         currentUni: false,
     },
+    {
+        title: "Diplomado de Fundamentos de Programación",
+        startDate: "2021-01-01",
+        endDate: "2021-06-01",
+        school: "Universidad del Norte",
+        location: "Barranquilla, Colombia",
+        description: "Diplomado en fundamentos de programación.",
+        currentUni: false,
+    },
+];
+
+export const additionalSkills = [
+    "Business Intelligence Foundation Professional Certification-BIFPC™",
+    "Scrum Foundation Professional Certification - SFPC™",
 ];
 
 export default education;

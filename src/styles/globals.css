@@ -7,6 +7,14 @@
     }
 }
 
+html {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 main {
     @apply flex-grow;
 }

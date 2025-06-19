@@ -19,11 +19,78 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
 
 /* Throw error if image does not exist */
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+
+/* Import image */
+const imageImport = await images[imagePath]();
 ---
 
+<div id="profile-modal" class="fixed inset-0 z-50 items-center justify-center bg-black/80 hidden opacity-0 transition-opacity duration-300" style="display:none;">
+  <img
+    src={imageImport.default.src}
+    alt="profile avatar"
+    class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl border-4 border-white scale-95 transition-transform duration-300"
+    style="object-fit:contain;"
+    id="profile-modal-img"
+  />
+</div>
+
 <Image
-        class="rounded-full w-[130px] md:w-[140px] object-cover"
-        src={images[imagePath]()}
-        alt="profile avatar"
-        loading="eager"
+  class="rounded-full w-[130px] md:w-[140px] object-cover cursor-pointer hover:brightness-90 transition"
+  src={imageImport.default}
+  alt="profile avatar"
+  loading="eager"
+  id="profile-image"
 />
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('profile-modal');
+    const profileImg = document.getElementById('profile-image');
+    const modalImg = document.getElementById('profile-modal-img');
+    if (profileImg && modal) {
+      profileImg.addEventListener('click', () => {
+        document.body.classList.add('overflow-hidden');
+        modal.style.display = 'flex';
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          modal.classList.add('opacity-100');
+          if (modalImg) {
+            modalImg.classList.remove('scale-95');
+            modalImg.classList.add('scale-100');
+          }
+        }, 10);
+      });
+
+      // Close modal when clicking outside the image or pressing Escape
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('opacity-100');
+          modal.classList.add('opacity-0');
+          if (modalImg) {
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+          }
+          setTimeout(() => {
+            document.body.classList.remove('overflow-hidden');
+            modal.style.display = 'none';
+          }, 300);
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          modal.classList.remove('opacity-100');
+          modal.classList.add('opacity-0');
+          if (modalImg) {
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+          }
+          setTimeout(() => {
+            document.body.classList.remove('overflow-hidden');
+            modal.style.display = 'none';
+          }, 300);
+        }
+      });
+    }
+  });
+</script>

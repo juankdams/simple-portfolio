@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ['media'],
+    darkMode: 'class',
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		container: {
@@ -22,13 +22,13 @@ export default {
 			colors: {
 				// Light mode colors
 				'light-theme': '#E9EBEC',
-				'primary-light': '#FBD144',
-				'primary-hover-light': '#FFE071',
+				'primary-light': '#010440',
+				'primary-hover-light': '#142B59',
 
 				// Dark mode colors
 				'dark-theme': '#0C151D',
-				'primary-dark': '#FFE071',
-				'primary-hover-dark': '#FBD144',
+				'primary-dark': '#A3D9D9',
+				'primary-hover-dark': '#54B5BF',
 
 				// Neutrals
 				'n200': '#d7d9da',

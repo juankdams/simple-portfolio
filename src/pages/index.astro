@@ -6,16 +6,20 @@ import TabsButtons from "../components/TabsButtons.tsx";
 import ProjectsCC from '@/components/ProjectsCC.astro';
 import AboutMeCC from "../components/AboutMeCC.astro";
 import ProfileFacts from "../components/ProfileFacts.astro";
+import TestimonialsSection from '@/components/TestimonialsSection.astro';
+import BackToTopButton from "../components/BackToTopButton.astro";
 ---
 
-<Layout title="VicBox Dot Dev | Portfolio" description="A simple portfolio created with Astro." scrollSmooth={false}>
+<Layout title="Juan Camilo Dams | Inteligencia de Negocios" description="Portafolio profesional de Juan Camilo Dams, especialista en inteligencia de negocios y análisis de datos." scrollSmooth={false}>
     <>
         <ProfileInfo/>
         <ProfileFacts/>
         <ProfileActionButton/>
         <TabsButtons client:idle>
-            <ProjectsCC slot="portfolio"/>
             <AboutMeCC slot="about"/>
+            <ProjectsCC slot="portfolio"/>
         </TabsButtons>
+        <TestimonialsSection />
+        <BackToTopButton />
     </>
 </Layout>

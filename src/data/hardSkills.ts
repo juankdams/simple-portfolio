@@ -6,24 +6,34 @@ interface HardSkill {
 
 const hardSkills: HardSkill[] = [
   {
-    name: "AstroJs",
-    description: "My favorite static site generator for building modern websites",
+    name: "Astro",
+    description: "Generador de sitios estáticos para construir sitios web modernos.",
     icon: "astro_dark"
   },
   {
-    name: "NextJs",
-    description: "My favorite React framework for building modern web apps",
-    icon: "nextjs_icon_dark"
+    name: "React",
+    description: "Librería para construir interfaces de usuario.",
+    icon: "react"
   },
   {
-    name: "NodeJs",
-    description: "I've been using NodeJs for backend development since 2018",
-    icon: "nodejs"
+    name: "Laravel (PHP)",
+    description: "Framework de PHP para el desarrollo de aplicaciones web.",
+    icon: "laravel"
   },
   {
-    name: "MongoDB",
-    description: "My favorite database for modern apps",
-    icon: "mongodb"
+    name: "SQL (Oracle, PostgreSQL, MySQL)",
+    description: "Experiencia con bases de datos relacionales: Oracle, PostgreSQL y MySQL.",
+    icon: "sql"
+  },
+  {
+    name: "KNIME",
+    description: "Plataforma de análisis de datos, generación de informes e integración.",
+    icon: "knime"
+  },
+  {
+    name: "Power BI",
+    description: "Servicio de análisis empresarial para visualizaciones interactivas.",
+    icon: "powerbi"
   }
 ];
 

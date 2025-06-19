@@ -1,60 +1,52 @@
 export const SITE = {
-    website: "https://simple-portfolio.vicbox.dev", // replace this with your deployed domain
-    title: "Simple Portfolio",
-    description: "A simple but beautiful portfolio created with Astro",
-    tags: ["portfolio", "Resume cv", "Astro"],
+    website: "", // aún no tienes sitio web
+    title: "Juan Camilo Dams | Inteligencia de Negocios.",
+    description: "Portafolio profesional de Juan Camilo Dams, especialista en inteligencia de negocios y análisis de datos.",
+    tags: ["inteligencia de negocios", "business intelligence", "analítica de datos", "data analysis", "portafolio", "Juan Dams"],
     ogImage: "/og-image.webp",
     logo: "logo",
-    logoText: "Portfolio",
-    lang: "en",
+    logoText: "Portafolio",
+    lang: "es",
     favicon: "/favicon.png",
-    repository: "https://github.com/vito8916/simple-portfolio.git",
-    author: "Victor Alvarado",
-    profile: "https://victoralvarado.dev/",
+    repository: "",
+    author: "Juan Dams",
+    profile: "https://www.linkedin.com/in/juancdams/",
 }
 
 export const ME = {
-    name: "VicBox Dot Dev",
-    profession: "Software Engineer | Full Stack Developer",
-    profileImage: "pp2.png",
+    name: "Juan Camilo Dams",
+    profession: "Ingeniero Industrial | Inteligencia de Negocios",
+    profileImage: "profilepic.jpg",
     profileFacts: [
-        {
-            value: 10,
-            description: "Years of Experience"
-        },
-        {
-            value: 5,
-            description: "Completed Projects"
-        },
-        {
-            value: 4,
-            description: "Satisfied Clients"
-        }
+        // {
+        //     value: 3,
+        //     description: "Años de Experiencia"
+        // },
     ],
     contactInfo: {
-        email: "vicbox.dev@vicbox.dev",
-        linkedin: "https://www.linkedin.com/in/victor-alvaradohn",
+        email: "juancadams1@gmail.com",
+        linkedin: "https://www.linkedin.com/in/juancdams/",
         resumeDoc: "resume.pdf",
     },
-    aboutMe: "I am a software engineer with a passion for web development. I have experience in building web " + "applications using modern technologies. I am a self-taught developer who enjoys learning new things and " + "sharing knowledge with others.",
+    aboutMe: "Ingeniero Industrial con experiencia en Análisis de Datos e Inteligencia de Negocios, con habilidades en procesos de ETL, automatización de procesos y visualización con Power BI y otras herramientas. He trabajado en áreas de Tecnología, Planeación y Gestión Organizacional, optimizando la toma de decisiones a través del análisis de datos y el desarrollo de soluciones estratégicas. Además, cuento con más de 10 años de experiencia en liderazgo en proyectos sociales, académicos y humanitarios implementando nuevas tecnologías, metodologías de planificación y análisis de datos.",
 }
 
 export const SOCIALS = [
     {
         name: "Twitter",
-        url: "https://twitter.com/vicbox.dev",
+        url: "https://x.com/juandams_",
         icon: "twitter-x-fill",
         show: true
     },
     {
         name: "Facebook",
-        url: "https://www.facebook.com/vicbox.dev",
+        url: "https://www.facebook.com/Jdams01",
         icon: "facebook-fill",
         show: false
     },
     {
         name: "Instagram",
-        url: "https://www.instagram.com/vicbox.dev",
+        url: "https://www.instagram.com/jdams.tech/?hl=es",
         icon: "instagram-fill",
         show: true
     },
@@ -62,7 +54,7 @@ export const SOCIALS = [
         name: "Youtube",
         url: "https://www.youtube.com/vicbox.dev",
         icon: "youtube-fill",
-        show: true
+        show: false
     },
     {
         name: "TikTok",
@@ -72,7 +64,7 @@ export const SOCIALS = [
     },
     {
         name: "GitHub",
-        url: "https://github.com/vicbox.dev",
+        url: "https://github.com/juankdams",
         icon: "github-fill",
         show: true
     }
